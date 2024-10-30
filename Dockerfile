@@ -4,7 +4,7 @@ ENV DATABASE_URL = "mongodb+srv://principianteenprogramar:47Ss9x6V2Pp8vIF5@clust
 
 RUN npm i -g @nestjs/cli
 
-RUN npm install
+#RUN npm install
 
 RUN npx prisma generate
 
