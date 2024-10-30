@@ -13,13 +13,14 @@ export class TaskQuery {
     }
 
     async CreateTask(name, description) {
-        await prisma.task.create({
+        const data = await prisma.task.create({
             data: {
                 name: name,
                 description: description,
                 createdon: new Date()
             }
-        })
+        });
+        return data;
     }
 
     async UpdateTask() {
