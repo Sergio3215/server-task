@@ -13,10 +13,13 @@ export class AppService {
 
 @Injectable()
 export class TaskService {
-  createTask(task: TaskSchema): void {
+  createTask(task: TaskSchema): Object {
     // Lógica para crear una nueva tarea
     const { name, description } = task;
     taskQuery.CreateTask(name, description);
+    return {
+      success:true
+    }
   }
 
   getTasks(): any {

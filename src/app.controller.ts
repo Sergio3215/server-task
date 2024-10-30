@@ -7,7 +7,7 @@ export class AppController {
   constructor(private readonly taskService: TaskService) { }
 
   @Post()
-  createPost(@Body() task: TaskSchema): void {
+  createPost(@Body() task: TaskSchema): Object {
     return this.taskService.createTask(task);
   }
 
