@@ -6,7 +6,7 @@ async function bootstrap() {
 
   // Habilita CORS para permitir el acceso desde otro origen
   app.enableCors({
-    origin: ['http://localhost:3000', 'task-with-nest-production.up.railway.app'], // Permitir solicitudes desde el puerto 3000
+    origin: process.env.Client,// ['http://localhost:3000', 'task-with-nest-production.up.railway.app'], Permitir solicitudes desde el puerto 3000
     credentials: true,                // Permitir cookies si es necesario
   });
   
