@@ -15,7 +15,7 @@ datasource db {
 
 model task {
   id    String  @id @default(auto()) @map("_id") @db.ObjectId
-  name  String @unique
+  name  String
   description String?
   createdon DateTime
 }
